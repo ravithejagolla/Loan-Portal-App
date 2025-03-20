@@ -48,7 +48,7 @@ const LoanApplicationForm = () => {
       setMessage('Application submitted successfully!');
       console.log(res.data);
       setTimeout(()=>{
-        navigate('/');
+        navigate('/confirmation');
       },1000)
     } catch (err) {
       console.error(err);
