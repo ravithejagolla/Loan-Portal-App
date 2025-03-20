@@ -39,7 +39,7 @@ const LoanApplicationForm = () => {
     }
 
     try {
-      const res = await axios.post('https://b43-web-172-web-project-167-1.onrender.com/api/apply-loan', formPayload, {
+      const res = await axios.post('https://b43-web-172-web-project-167-2.onrender.com/api/apply-loan', formPayload, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
