@@ -1,6 +1,7 @@
 import generateOtp from '../utils/generateOtp.js';
 import transporter from '../config/nodemailer.js';
 import redis from '../config/redis.js';
+import env from 'dotenv'
 
 export const sendEmailOtp = async (req, res) => {
   const { email } = req.body;
@@ -13,7 +14,7 @@ export const sendEmailOtp = async (req, res) => {
   const otpKey = `otp:${email}`;
 
   const mailOptions = {
-    from: '"LoanPortal" <no-reply@loanportal.com>',
+    from: process.env.EMAIL_USER,
     to: email,
     subject: 'Your OTP Code',
     text: `Your OTP code is: ${otp}`,
