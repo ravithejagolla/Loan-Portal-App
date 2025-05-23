@@ -12,7 +12,7 @@ const EmailOtpLogin = () => {
 
   const sendOtp = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/send-email-otp', {
+      const res = await axios.post('https://b43-web-172-web-project-167-3.onrender.com/api/send-email-otp', {
         email,
       });
       setMessage(res.data.message);
@@ -26,7 +26,7 @@ const EmailOtpLogin = () => {
   const verifyOtp = async () => {
    
     try {
-      const res = await axios.post('http://localhost:5000/api/verify-email-otp', {
+      const res = await axios.post('https://b43-web-172-web-project-167-3.onrender.com/api/verify-email-otp', {
         email,
         otp,
       });
